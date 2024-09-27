@@ -6,6 +6,7 @@ import About from "./pages/about/about.jsx";
 const App = () => {
   return (
     <BrowserRouter>
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />

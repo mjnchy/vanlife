@@ -70,8 +70,11 @@ body {
 }
 
 .navbar > .navbar-header {
-  font-weight: 700;
+  color: black;
+  font-weight: 800;
   margin: 0 10px;
+  text-decoration: none;
+  font-size: 1.8rem;
 }
 
 .navbar > .navbar-list {
@@ -79,8 +82,11 @@ body {
 }
 
 .navbar-li {
+  color: black;
   display: inline;
+  font-size: 1.4rem;
   margin: 0 1.5vw;
+  text-decoration: none;
 }
 
 #home-page {
