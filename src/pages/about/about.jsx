@@ -31,7 +31,7 @@ const About = () => {
           <div className={styles['highlight-text']}>
             Your van is ready.
           </div>
-          <button className={styles.btn}>Explore our vans</button>
+          <button className={`btn ${styles.btn}`}>Explore our vans</button>
         </div>
       </div>
     </div>
