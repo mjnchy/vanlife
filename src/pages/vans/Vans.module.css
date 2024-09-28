@@ -1,0 +1,44 @@
+.header {
+  font-weight: 800;
+  font-size: 2.5rem;
+  width: calc(100% - 25px);
+  margin: auto;
+}
+
+.list-container {
+  margin: 50px auto 25px;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
+  flex: 0 1 calc(50% - 20px);
+  max-width: 250px;
+}
+
+.image {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.van-info {
+  height: 25px;
+  margin: 5px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.van-title {
+  font-size: 1.6rem;
+  font-weight: 800;
+}
+
+.van-pricing {
+  font-size: 1.3rem;
+}

@@ -1,0 +1,48 @@
+.img {
+  width: 100%
+}
+
+.hero {
+  width: 90%;
+  margin: auto;
+  color: black;
+}
+
+.header {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.description-container {
+  margin: 25px auto;
+  line-height: 1.5;
+}
+
+.description {
+  font-size: 1.4rem;
+  margin: 25px auto;
+}
+
+.highlight {
+  background-color: orange;
+  margin: 50px 0 0;
+  padding: 25px;
+  border-radius: 5px;
+}
+
+.highlight-text {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin: 10px 0;
+}
+
+.highlight .btn {
+  color: white;
+  width: fit-content;
+  margin: 15px 0 0;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: black;
+  border: none;
+}
