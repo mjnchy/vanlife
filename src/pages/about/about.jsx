@@ -1,9 +1,9 @@
-import styles from "./index.module.css";
+import styles from "./About.module.css";
 import image from "../../assets/about-hero.png";
 
 const About = () => {
   return (
-    <div className={`page`} id="about-page">
+    <div className="page" id="about-page">
       <img className={styles.img} src={image} />
       <div className={styles.hero}>
         <h2 className={styles.header} id="about-hero-header">
@@ -15,8 +15,9 @@ const About = () => {
             Out mission is to enliven your road trip with the perfect travel
             van rental. Our vans are recertified before each trip to ensure
             your travel plans to go off without a hitch.
-            (Hitch costs extra)
           </p>
+          <p className={styles["new-line"]}>(Hitch costs extra)</p>
+
           <p className={styles.description}>
             Our team is full of vanlife enthusiasts who know firshand the
             magic of touring the world on 4 wheels.

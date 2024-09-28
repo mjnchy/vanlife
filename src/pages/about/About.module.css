@@ -15,13 +15,17 @@
 }
 
 .description-container {
-  margin: 25px auto;
+  margin: 25px auto 50px;
   line-height: 1.5;
 }
 
 .description {
   font-size: 1.4rem;
-  margin: 25px auto;
+  margin: 25px auto 0;
+}
+
+.new-line {
+  font-size: 1.4rem;
 }
 
 .highlight {

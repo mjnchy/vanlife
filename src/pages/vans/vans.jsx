@@ -1,15 +1,21 @@
 import { useEffect } from 'react';
 import styles from './Vans.module.css';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Card = (props) => {
   return (
     <li className={styles.card}>
-      <img className={styles.image} src={props.url} />
-      <div className={styles["van-info"]}>
-        <h2 className={styles["van-title"]}>{props.name}</h2>
-        <p className={styles['van-pricing']}>{`$${props.price}/day`}</p>
-      </div>
+      <Link className={styles.link} to={`/vans/${props.id}`}>
+        <img className={styles.image} src={props.url} />
+        <div className={styles["van-info"]}>
+          <h2 className={styles["van-title"]}>{props.name}</h2>
+          <div className={styles["pricing-info"]}>
+            <p className={styles.rate}>{`$${props.price}`}</p>
+            <p className={styles.time}>/day</p>
+          </div>
+        </div>
+      </Link>
     </li>
   );
 };
@@ -26,6 +32,7 @@ const Vans = () => {
             url={van.imageUrl}
             price={van.price}
             key={van.id}
+            id={van.id}
           />);
         setVans(cards);
       });
