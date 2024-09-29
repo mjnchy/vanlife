@@ -5,6 +5,10 @@
 }
 
 .header, .paragraph {
+  margin: 50px auto;
   color: var(--text-light);
-  margin: 25px auto;
+}
+
+.btn {
+  margin: 50px auto;
 }

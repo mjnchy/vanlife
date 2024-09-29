@@ -45,10 +45,10 @@ table {
 
 :root {
   /*Color Variables*/
-  --base: #43291f;
+  --base: #f4f0bb;
   --accent: #226f54;
   --accent2: #da2c38;
-  --accent3: #f4f0bb;
+  --accent3: #43291f;
   --text-light: #fff;
   --text-dark: #000;
   /* Sizes */
@@ -64,6 +64,20 @@ body {
   font-family: "Inter", sans-serif;
   font-size: 1.4rem;
   line-height: 1.5;
+}
+
+.navbar-container {
+  height: 75px;
+  width: calc(100% - 50px);
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-li {
+  display: inline-block;
+  margin: 0 10px;
 }
 
 .page {
@@ -84,4 +98,32 @@ body {
 .header {
   font-size: 3rem;
   font-weight: 800;
+}
+
+.header, .paragraph {
+  margin: 25px auto;
+}
+
+.link.btn {
+  display: block;
+  color: var(--text-light);
+  background-color: var(--accent2);
+  width: 100%;
+  margin: 25px auto;
+  max-width: 650px;
+  padding: 25px;
+  border: none;
+  border-radius: 5px;
+  transition: all, 250ms;
+  font-size: 1.8rem;
+  font-weight: 800;
+}
+
+.link.btn:hover {
+  background-color: var(--accent);
+}
+
+.header, .nav-li, .link, .btn {
+  color: var(--text-dark);
+  text-decoration: none;
 }
