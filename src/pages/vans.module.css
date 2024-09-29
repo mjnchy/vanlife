@@ -1,0 +1,25 @@
+.van-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+}
+
+.image {
+  border-radius: 5px;
+}
+
+.van-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.van-price {
+  font-weight: 800;
+  font-size: 1.6rem;
+  text-align: end;
+}
+
+.van-price span {
+  font-weight: 500;
+  font-size: 1.3rem;
+}

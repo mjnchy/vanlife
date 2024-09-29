@@ -134,3 +134,28 @@ body {
   color: var(--dark);
   text-decoration: none;
 }
+
+.van-title {
+  font-size: clamp(1.6rem, 2.5vw, 2rem);
+  font-weight: 800;
+}
+
+.van-type {
+  width: fit-content;
+  color: var(--light);
+  font-size: 1.2rem;
+  font-weight: 800;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin: 5px 0;
+}
+
+.van-type.simple {
+  background-color: var(--accent);
+}
+.van-type.rugged {
+  background-color: var(--accent3);
+}
+.van-type.luxury {
+  background-color: var(--accent2);
+}
