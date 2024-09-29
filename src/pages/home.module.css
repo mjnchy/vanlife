@@ -9,6 +9,6 @@
   color: var(--text-light);
 }
 
-.btn {
-  margin: 50px auto;
+.link.btn {
+  margin: 75px auto 50px;
 }
