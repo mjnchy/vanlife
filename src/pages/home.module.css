@@ -1,0 +1,10 @@
+.page {
+  width: 100%;
+  padding: 75px 0 25px;
+  background: url(../assets/images/home-hero.png);
+}
+
+.header, .paragraph {
+  color: var(--text-light);
+  margin: 25px auto;
+}

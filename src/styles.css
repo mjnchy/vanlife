@@ -1,0 +1,87 @@
+/*Reset*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+:root {
+  /*Color Variables*/
+  --base: #43291f;
+  --accent: #226f54;
+  --accent2: #da2c38;
+  --accent3: #f4f0bb;
+  --text-light: #fff;
+  --text-dark: #000;
+  /* Sizes */
+  font-size: 10px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--base);
+  font-family: "Inter", sans-serif;
+  font-size: 1.4rem;
+  line-height: 1.5;
+}
+
+.page {
+  width: calc(100% - 50px);
+  margin: auto;
+}
+
+.content-container {
+  width: 80%;
+  margin: auto;
+}
+
+.image {
+  width: 100%;
+  margin: auto;
+}
+
+.header {
+  font-size: 3rem;
+  font-weight: 800;
+}
