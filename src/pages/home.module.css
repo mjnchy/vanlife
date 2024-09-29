@@ -1,12 +1,12 @@
 .page {
   width: 100%;
   padding: 75px 0 25px;
-  background: url(../assets/images/home-hero.png);
+  background-image: url(../assets/images/home-hero.png);
 }
 
 .header, .paragraph {
   margin: 50px auto;
-  color: var(--text-light);
+  color: var(--light);
 }
 
 .link.btn {

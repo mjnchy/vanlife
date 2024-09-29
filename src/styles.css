@@ -49,8 +49,9 @@ table {
   --accent: #226f54;
   --accent2: #da2c38;
   --accent3: #43291f;
-  --text-light: #fff;
-  --text-dark: #000;
+  --accent4: #87c38f;
+  --light: #fff;
+  --dark: #000;
   /* Sizes */
   font-size: 10px;
 }
@@ -62,13 +63,13 @@ table {
 body {
   background-color: var(--base);
   font-family: "Inter", sans-serif;
-  font-size: 1.6rem;
+  font-size: clamp(1.3rem, 2vw, 1.6rem);
   line-height: 1.5;
 }
 
 .navbar-container {
   height: 75px;
-  width: calc(100% - 50px);
+  width: clamp(calc(100% - 40px), 97.5vw, calc(100% - 30px));
   margin: auto;
   display: flex;
   justify-content: space-between;
@@ -85,12 +86,13 @@ body {
 }
 
 .page {
-  width: calc(100% - 50px);
+  width: clamp(calc(100% - 40px), 97.5vw, calc(100% - 30px));
   margin: auto;
+  background-repeat: no-repeat;
 }
 
 .content-container {
-  width: 80%;
+  width: 90%;
   margin: auto;
 }
 
@@ -100,7 +102,7 @@ body {
 }
 
 .header {
-  font-size: 2.5rem;
+  font-size: clamp(2rem, 5vw, 2.75rem);
   font-weight: 800;
 }
 
@@ -110,16 +112,17 @@ body {
 
 .link.btn {
   display: block;
-  color: var(--text-light);
+  color: var(--light);
   background-color: var(--accent2);
   width: 100%;
   margin: 25px auto;
   max-width: 650px;
-  padding: 25px;
+  padding: 20px;
   border: none;
   border-radius: 5px;
+  text-align: center;
   transition: all, 250ms;
-  font-size: 1.8rem;
+  font-size: clamp(1.4rem, 2.5vw, 1.8rem);
   font-weight: 800;
 }
 
@@ -128,6 +131,6 @@ body {
 }
 
 .header, .nav-li, .link, .btn {
-  color: var(--text-dark);
+  color: var(--dark);
   text-decoration: none;
 }
