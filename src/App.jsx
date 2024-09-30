@@ -5,6 +5,7 @@ import Home from './pages/Home.jsx';
 import About from './pages/About.jsx';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Vans from './pages/Vans.jsx';
+import Details from './pages/Details.jsx';
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
           <Route path={`/`} element={<Home />} />
           <Route path={`/about`} element={<About />} />
           <Route path={'/vans'} element={<Vans />} />
+          <Route path={'/vans/:id'} element={<Details />} />
         </Route>
       </Routes>
     </BrowserRouter>

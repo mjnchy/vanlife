@@ -2,33 +2,50 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import styles from './vans.module.css';
 
-const Tile = (props) => {
-  return (
-    <li className='tile'>
-      <Link className='link' id={props.id}>
-        <img className={`image ${styles.image}`} src={props.image} />
+const Tile = (arr) => {
+  return arr.map(item =>
+    <li className='tile' key={item.id}>
+      <Link className='link' id={item.id}>
+        <img className={`image ${styles.image}`} src={item.imageUrl} />
         <div className={styles['van-info']}>
           <div>
-            <h3 className='van-title'>{props.name}</h3>
-            <h3 className={`van-type ${props.type}`}>{props.type[0].toUpperCase() + props.type.slice(1)}</h3>
+            <h3 className='van-title'>{item.name}</h3>
+            <h3 className={`van-type ${item.type}`}>{item.type[0].toUpperCase() + item.type.slice(1)}</h3>
           </div>
-          <p className={styles['van-price']}>${props.price}<br /> <span>/day</span></p>
+          <p className={styles['van-price']}>${item.price}<br /> <span>/day</span></p>
         </div>
       </Link>
     </li>
-  )
-}
+  );
+};
+
+const fetchVans = async (api) => {
+  const response = await fetch(api);
+  const json = await response.json();
+  const vans = await json.vans;
+
+  return vans;
+};
 
 const Vans = () => {
-  const [vans, setVans] = useState([]);
+  const [vans, setVans] = useState(localStorage.vans ? localStorage.vans : []);
 
   useEffect(() => {
-    fetch('/api/vans').then(response => response.json())
-      .then(json => {
-        const newVans = json.vans.map(van =>
-          <Tile name={van.name} type={van.type} price={van.price} image={van.imageUrl} key={van.id} id={van.id} />);
-        setVans(newVans);
+    if (!localStorage.getItem('vans')) {
+      fetchVans('/api/vans').then(vans => {
+        localStorage.setItem('vans', JSON.stringify(vans));
+        setVans(Tile(vans));
       })
+    } else setVans(Tile(JSON.parse(localStorage.getItem('vans'))));
+  }, []);
+
+  useEffect(() => {
+    fetchVans('/api/vans').then(vans => {
+      const localVans = localStorage.getItem('vans');
+      if (JSON.stringify('vans') == localVans) return;
+      localStorage.setItem('vans', JSON.stringify(vans));
+      setVans(Tile(vans));
+    })
   }, []);
 
   return (
