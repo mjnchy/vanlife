@@ -14,12 +14,5 @@
 }
 
 .van-price {
-  font-weight: 800;
-  font-size: 1.6rem;
   text-align: end;
-}
-
-.van-price span {
-  font-weight: 500;
-  font-size: 1.3rem;
 }
