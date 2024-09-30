@@ -12,7 +12,7 @@ const Tile = (arr) => {
             <h3 className='van-title'>{item.name}</h3>
             <h3 className={`van-type ${item.type}`}>{item.type[0].toUpperCase() + item.type.slice(1)}</h3>
           </div>
-          <p className={`van-price styles['van-price']`}>${item.price}<br /> <span>/day</span></p>
+          <p className={`van-price ${styles['van-price']}`}>${item.price}<br /> <span>/day</span></p>
         </div>
       </Link>
     </li>

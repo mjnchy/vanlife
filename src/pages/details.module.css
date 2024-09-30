@@ -1,0 +1,24 @@
+.link {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin: 25px auto;
+  text-decoration: underline;
+}
+
+.image {
+  border-radius: 5px;
+}
+
+.van-type {
+  margin: 25px 0 15px;
+}
+
+.van-title {
+  margin: 10px 0 5px;
+}
+
+.van-price {
+  margin: 10px 0;
+  font-size: 2rem;
+}
