@@ -5,7 +5,7 @@ import styles from './vans.module.css';
 const Tile = (arr) => {
   return arr.map(item =>
     <li className='tile' key={item.id}>
-      <Link className='link' id={item.id}>
+      <Link className='link' id={item.id} to={`/vans/${item.id}`}>
         <img className={`image ${styles.image}`} src={item.imageUrl} />
         <div className={styles['van-info']}>
           <div>
@@ -31,22 +31,22 @@ const Vans = () => {
   const [vans, setVans] = useState(localStorage.vans ? localStorage.vans : []);
 
   useEffect(() => {
-    if (!localStorage.getItem('vans')) {
+    if (localStorage.getItem('vans')) {
+      setVans(Tile(JSON.parse(localStorage.getItem('vans'))));
+      fetchVans('/api/vans').then(vans => {
+        const localVans = localStorage.getItem('vans');
+        if (JSON.stringify('vans') == localVans) return;
+        localStorage.setItem('vans', JSON.stringify(vans));
+        setVans(Tile(vans));
+      });
+    } else {
       fetchVans('/api/vans').then(vans => {
         localStorage.setItem('vans', JSON.stringify(vans));
         setVans(Tile(vans));
-      })
-    } else setVans(Tile(JSON.parse(localStorage.getItem('vans'))));
+      });
+    };
   }, []);
 
-  useEffect(() => {
-    fetchVans('/api/vans').then(vans => {
-      const localVans = localStorage.getItem('vans');
-      if (JSON.stringify('vans') == localVans) return;
-      localStorage.setItem('vans', JSON.stringify(vans));
-      setVans(Tile(vans));
-    })
-  }, []);
 
   return (
     <div className={`page ${styles.page}`}>
