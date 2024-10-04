@@ -56,6 +56,16 @@ table {
   font-size: 10px;
 }
 
+html, body, #root {
+  height: 100%;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
+}
+
 .arrow-left {
   display: inline-block;
   width: 1.6rem;
@@ -79,7 +89,7 @@ body {
 .navbar-container {
   height: 75px;
   width: clamp(calc(100% - 40px), 97.5vw, calc(100% - 30px));
-  margin: auto;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -177,4 +187,18 @@ body {
 }
 .van-type.luxury {
   background-color: var(--accent2);
+}
+
+.footer {
+  display: block;
+  color: var(--light);
+  font-weight: 800;
+  text-align: center;
+  width: calc(100vw - 4px);
+  padding: 1vh 0;
+  background-color: var(--dark);
+  border-radius: 5px;
+  position: relative;
+  left: 2px;
+  bottom: 2px;
 }
