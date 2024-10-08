@@ -8,8 +8,9 @@ import Vans from './pages/Vans.jsx';
 import Details from './pages/Details.jsx';
 import Dashboard from './pages/host/Dashboard.jsx';
 import Income from './pages/host/Income.jsx';
+import HostVans from './pages/host/Vans.jsx';
 import Review from './pages/host/Review.jsx';
-import HostNav from './components/HostNav.jsx';
+import HostLayout from './components/HostLayout.jsx';
 
 const App = () => {
   return (
@@ -21,9 +22,10 @@ const App = () => {
           <Route path='vans' element={<Vans />} />
           <Route path='vans/:id' element={<Details />} />
 
-          <Route path='host' element={<HostNav />}>
+          <Route path='host' element={<HostLayout />}>
             <Route index element={<Dashboard />} />
             <Route path='income' element={<Income />} />
+            <Route path='vans' element={<HostVans />} />
             <Route path='reviews' element={<Review />} />
           </Route>
         </Route>
